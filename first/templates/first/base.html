@@ -1,0 +1,44 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<!--<![endif]-->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+
+    <link rel="stylesheet" href="{% static 'libs/bootstrap/bootstrap-grid-3.3.1.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'libs/font-awesome-4.7.0/css/font-awesome.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'libs/font-awesome-5.0.8/css/fontawesome.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/first/fonts.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/first/main.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/first/media.css' %}"/>
+
+</head>
+<body>
+
+<div class="bg"></div>
+
+{% block content %}
+{% endblock %}
+
+<script src="../../static/libs/jquery/jquery-1.11.1.min.js"></script>
+<script src="../../static/libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+<script src="../../static/js/common.js"></script>
+
+</body>
+</html>

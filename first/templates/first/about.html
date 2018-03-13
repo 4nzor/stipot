@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+{% extends 'first/base.html' %}
+
+<html lang="ru">
+
+<head>
+    {% block title %}About{% endblock %}
+</head>
+
+<body>
+{% block content %}
+
+    <div class="block_registration">
+        <div class="signin_reg"><a href="{% url 'signin' %}">SIGN IN</a></div>
+        <p class="line"></p>
+        <div class="register_reg"><a href="{% url 'register' %}">REGISTER</a></div>
+    </div>
+
+    <div class="main_menu">
+        <ul>
+            <li><a href="{% url 'stipot' %}">STIPOT</a></li>
+            <li><a href="{% url 'about' %}" class="active-button">ABOUT</a></li>
+            <li><a href="{% url 'eventmap' %}">EVENT MAP</a></li>
+            <li><a href="{% url 'faq' %}">FAQ</a></li>
+            <li><a href="{% url 'partners' %}">PARTNERS</a></li>
+        </ul>
+    </div>
+
+    <div class="block_logo_categ">
+        <img src="../../static/images/image_category.png" alt="logo">
+        <div class="text_logo">ABOUT</div>
+    </div>
+
+    <div class="about_content">
+        <div class="about_block">
+            <div class="text_about">
+                <p class="first_parag"><a href="{% url 'stipot' %}">STIPOT</a> IS A FRAMEWORK TO FOSTER KNOWLEDGE
+                    EXCHANGE
+                    AND RAISE AWARENESS OF THE FUTURE
+                    CHALLENGES TO SCIENCE, TECHNOLOGY AND INNOVATION.</p>
+                <p class="second_parag">THIS PORTAL ALLOWS SCIENTISTS TO SHARE THEIR KNOWLEDGE & EXPERTISE IN SCIENCE,
+                    TECHNOLOGY AND INNOVATION BY DELIVERING A LECTURE IN ANY FILED OF KNOWLEDGE THEY HAVE EXPERTISE IN,
+                    WHILE TRAVELING ABROAD.</p>
+                <p class="third_parag">SCIENCE IS A UNIVERSAL LANGUAGE, LET'S USE IT TO SHAPE THE WORLD!</p>
+                <p class="fourth_parag">GOING <a href="{% url 'eventmap' %}">ABROAD</a>? DELIVER A <a
+                        href="{% url 'register' %}">LECTURE</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main_footer">
+        <div class="sctein">
+            <span class="science_footer">SCIENCE</span> TECHNOLOGY <span class="inno_footer">INNOVATION</span>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2017 MINISTRY OF EDUCATION AND SCIENCE OF THE RUSSIAN FEDERATION</p>
+        </div>
+    </footer>
+
+{% endblock %}
+</body>
+</html>

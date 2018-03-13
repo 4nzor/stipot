@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+{% extends 'first/base.html' %}
+
+<html lang="ru">
+
+<head>
+    {% block title %}Sign in{% endblock %}
+</head>
+
+<body>
+{% block content %}
+
+    <div class="block_registration">
+        <div class="signin_reg"><a href="{% url 'signin' %}" class="active_reg">SIGN IN</a></div>
+        <p class="line"></p>
+        <div class="register_reg"><a href="{% url 'register' %}">REGISTER</a></div>
+    </div>
+
+    <div class="main_menu">
+        <ul>
+            <li><a href="{% url 'stipot' %}">STIPOT</a></li>
+            <li><a href="{% url 'about' %}">ABOUT</a></li>
+            <li><a href="{% url 'eventmap' %}">EVENT MAP</a></li>
+            <li><a href="{% url 'faq' %}">FAQ</a></li>
+            <li><a href="{% url 'partners' %}">PARTNERS</a></li>
+        </ul>
+    </div>
+
+    <div class="block_logo_categ">
+        <img src="../../static/images/image_category.png" alt="logo">
+        <div class="text_logo">SIGN IN</div>
+    </div>
+
+    <div class="signin_content">
+        <div class="block_signin">
+            <form action="" class="signin_form" method="post">
+                {% csrf_token%}
+                <p class="sig_text_usna">USERNAME</p>
+                <input type="text" class="signin_usna" name="username">
+                <p class="sig_text_pass">PASSWORD</p>
+                <input type="password" class="signin_pass" name="pass">
+                <label class="signin_label">
+                    <input type="checkbox" class="signin_check" checked="checked">
+                    <span class="checkmark"></span>
+                    <p class="sig_text_remem">REMEMBER THIS COMPUTER</p>
+                </label>
+                <input type="submit" class="signin_butt" value="SIGN IN">
+            </form>
+            <div class="forgot_data">
+                <div class="forgot_pass">
+                    <u><a href="">FORGOT PASSWORD?</a></u>
+                </div>
+                <div class="forgot_usna">
+                    <u><a href="">FORGOT USERNAME?</a></u>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main_footer">
+        <div class="sctein">
+            <span class="science_footer">SCIENCE</span> TECHNOLOGY <span class="inno_footer">INNOVATION</span>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2017 MINISTRY OF EDUCATION AND SCIENCE OF THE RUSSIAN FEDERATION</p>
+        </div>
+    </footer>
+
+{% endblock %}
+</body>
+</html>

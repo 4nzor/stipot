@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+{% extends 'first/base.html' %}
+
+<html lang="ru">
+
+<head>
+    {% block title %}Stipot{% endblock %}
+</head>
+
+<body>
+{% block content %}
+
+    <div class="block_registration">
+        <div class="signin_reg"><a href="{% url 'signin' %}">SIGN IN</a></div>
+        <p class="line"></p>
+        <div class="register_reg"><a href="{% url 'register' %}">REGISTER</a></div>
+    </div>
+
+    <div class="main_menu">
+        <ul>
+            <li><a href="{% url 'stipot' %}" class="active-button">STIPOT</a></li>
+            <li><a href="{% url 'about' %}">ABOUT</a></li>
+            <li><a href="{% url 'eventmap' %}">EVENT MAP</a></li>
+            <li><a href="{% url 'faq' %}">FAQ</a></li>
+            <li><a href="{% url 'partners' %}">PARTNERS</a></li>
+        </ul>
+    </div>
+
+    <div class="main_content">
+        <div class="backg_world"><img src="../../static/images/world.png"></div>
+        <div class="stipot_content">
+            <div class="block_stipot">
+                <div class="backg_stipot"></div>
+                <div class="bott_line"></div>
+                <div class="stipot_text">
+                    <p class="parag">GOING <a href="{% url 'eventmap' %}">ABROAD</a>? DELIVER A <a
+                            href="{% url 'register' %}">LECTURE</a>.</p>
+                    <p>SHARE YOUR <a href="{% url 'eventmap' %}">KNOWLEDGE</a> & <a
+                            href="{% url 'eventmap' %}">EXPERTISE</a></p>
+                    <p>IN SCIENCE, TECHNOLOGY AND INNOVATION</p>
+                    <p><a href="{% url 'eventmap' %}">WITH THE WORLD</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main_footer">
+        <div class="sctein">
+            <span class="science_footer">SCIENCE</span> TECHNOLOGY <span class="inno_footer">INNOVATION</span>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2017 MINISTRY OF EDUCATION AND SCIENCE OF THE RUSSIAN FEDERATION</p>
+        </div>
+    </footer>
+
+{% endblock %}
+</body>
+</html>
